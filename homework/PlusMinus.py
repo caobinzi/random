@@ -15,9 +15,9 @@ def getRandome(max):
     return randint(0, max)
 
 
-def getPlus():
-    a = getRandome(MAX_NUM)
-    b = getRandome(MAX_NUM)
+def getPlus(mymax):
+    a = getRandome(mymax)
+    b = getRandome(mymax)
 
     return pad(a) + " + " + pad(b) + " =    \t"
 
@@ -36,9 +36,9 @@ def min(a, b):
         return a
 
 
-def getMinus():
-    a = getRandome(MAX_NUM)
-    b = getRandome(MAX_NUM)
+def getMinus(mymax):
+    a = getRandome(mymax)
+    b = getRandome(mymax)
     c = max(a, b)
     d = min(a, b)
 
@@ -50,7 +50,7 @@ def writeFile(file_name, line):
         myfile.write(line+"\n")
 
 
-lines = [getPlus() + getPlus() + getMinus() for l in range(1, 216)]
+lines = [getPlus(12) + getPlus(12) + getMinus(12) for l in range(1, 216)]
 
 for line in lines:
     writeFile("/Users/caobinzi/Desktop/a.txt", line)
