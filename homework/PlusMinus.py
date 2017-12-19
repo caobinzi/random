@@ -49,10 +49,10 @@ def writeFile(file_name, line):
     with open(file_name, "a") as myfile:
         myfile.write(line+"\n")
 
-start = 1
-end = 20
+start = 2
+end = 30
 
-lines = [getPlus(start, end) + getPlus(start, end) + getMinus(start, end) for l in range(1, 200)]
+lines = [getPlus(start, end) +  getPlus(start, end) + getMinus(start, end) for l in range(1, 400)]
 
 for line in lines:
     writeFile("/Users/caobinzi/Desktop/a.txt", line)
